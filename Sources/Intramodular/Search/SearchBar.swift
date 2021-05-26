@@ -13,7 +13,6 @@ public struct SearchBar: DefaultTextInputType {
     
     #if os(iOS) || targetEnvironment(macCatalyst)
     @available(macCatalystApplicationExtension, unavailable)
-    @available(iOSApplicationExtension, unavailable)
     @available(tvOSApplicationExtension, unavailable)
     @ObservedObject private var keyboard = Keyboard.main
     #endif
@@ -67,7 +66,6 @@ public struct SearchBar: DefaultTextInputType {
 #if os(iOS) || targetEnvironment(macCatalyst)
 
 @available(macCatalystApplicationExtension, unavailable)
-@available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
 extension SearchBar: UIViewRepresentable {
     public typealias UIViewType = UISearchBar
@@ -177,7 +175,6 @@ extension UISearchBar {
 #elseif os(macOS)
 
 @available(macCatalystApplicationExtension, unavailable)
-@available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
 extension SearchBar: NSViewRepresentable {
     public typealias NSViewType = NSSearchField
@@ -244,7 +241,6 @@ extension SearchBar: NSViewRepresentable {
 // MARK: - API -
 
 @available(macCatalystApplicationExtension, unavailable)
-@available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
 extension SearchBar {
     public func customAppKitOrUIKitClass(_ cls: AppKitOrUIKitSearchBar.Type) -> Self {
@@ -253,7 +249,6 @@ extension SearchBar {
 }
 
 @available(macCatalystApplicationExtension, unavailable)
-@available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
 extension SearchBar {
     #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
@@ -320,7 +315,6 @@ extension UISearchBar {
 
 #if os(iOS) || targetEnvironment(macCatalyst)
 @available(macCatalystApplicationExtension, unavailable)
-@available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
